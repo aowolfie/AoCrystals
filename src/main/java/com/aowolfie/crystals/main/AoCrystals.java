@@ -1,6 +1,6 @@
 package com.aowolfie.crystals.main;
 
-import com.aowolfie.crystals.proxies.CommonProxy;
+import com.aowolfie.crystals.main.proxies.CommonProxy;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -11,18 +11,18 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 
 
-@Mod(modid = Main.MODID, name = Main.MODNAME, version = Main.VERSION)
-public class Main {
+@Mod(modid = AoCrystals.MODID, name = AoCrystals.MODNAME, version = AoCrystals.VERSION)
+public class AoCrystals {
 
     public static final String MODID = "aocrystals";
     public static final String MODNAME = "Crystals";
     public static final String VERSION = "1.0.0";
 
-    @SidedProxy(clientSide="com.aowolfie.crystals.proxies.ClientProxy", serverSide="com.aowolfie.crystals.proxies.ServerProxy")
+    @SidedProxy(clientSide="com.aowolfie.crystals.main.proxies.ClientProxy", serverSide="com.aowolfie.crystals.main.proxies.ServerProxy")
     public static CommonProxy proxy;
 
     @Instance
-    public static Main instance = new Main();
+    public static AoCrystals instance = new AoCrystals();
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent e) {

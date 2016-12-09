@@ -1,10 +1,10 @@
-package com.aowolfie.crystals.proxies;
+package com.aowolfie.crystals.main.proxies;
 
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-public class ClientProxy extends CommonProxy {
+public class ServerProxy extends CommonProxy {
 
     @Override
     public void preInit(FMLPreInitializationEvent e) {
