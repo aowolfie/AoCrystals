@@ -12,7 +12,7 @@ public final class ModItems {
     public static Item testItem;
 
     public static void createItems() {
-        testItem = register(new ItemBase("test").setCreativeTab(CreativeTabs.BREWING));
+        testItem = register(new ItemBase("testItem").setCreativeTab(CreativeTabs.BREWING));
     }
 
     private static <T extends Item> T register(T item) {
