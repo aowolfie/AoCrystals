@@ -16,7 +16,7 @@ public class BlockBase extends Block implements ItemModelProvider {
         this.name = name;
         setUnlocalizedName(name);
         setRegistryName(name);
-        //setCreativeTab(TutorialMod.creativeTab); //this creativetab hasn't been implemented yet
+        setCreativeTab(CreativeTabs.BREWING);
     }
 
     @Override
@@ -30,6 +30,5 @@ public class BlockBase extends Block implements ItemModelProvider {
         super.setCreativeTab(tab);
         return this;
     }
-
 
 }

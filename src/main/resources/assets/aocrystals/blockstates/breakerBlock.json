@@ -2,7 +2,7 @@
   "forge_marker": 1,
   "defaults": {
     "textures": {
-      "all": "aocrystals:blocks/testBlock"
+      "all": "aocrystals:blocks/breakerBlock"
     }
   },
   "variants": {

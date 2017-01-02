@@ -1,12 +1,14 @@
 package com.aowolfie.crystals.blocks;
 
 
+import com.aowolfie.crystals.blocks.tile.TileBreaker;
 import com.aowolfie.crystals.items.ItemModelProvider;
 import com.aowolfie.crystals.main.AoCrystals;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemBlock;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /**
@@ -14,10 +16,16 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
  */
 public class ModBlocks {
 
-    public static Block testBlock;
+    public static Block breakerBlock;
+
+
+    public static void init(){
+        createBlocks();
+        registerTile();
+    }
 
     public static void createBlocks(){
-        testBlock = register(new BlockBase(Material.ROCK,"testBlock").setCreativeTab(CreativeTabs.BREWING));
+        breakerBlock = register(new BreakerBlock());
     }
 
     private static <T extends Block> T register (T block, ItemBlock itemBlock) {
@@ -38,5 +46,13 @@ public class ModBlocks {
         ItemBlock itemBlock = new ItemBlock(block);
         itemBlock.setRegistryName(block.getRegistryName());
         return register(block, itemBlock);
+    }
+
+    private static void registerTile(){
+     registerTile(TileBreaker.class, breakerBlock.getUnlocalizedName());
+    }
+
+    private static void registerTile(Class<? extends TileEntity> tile, String string) {
+        GameRegistry.registerTileEntity(tile, AoCrystals.MODID + string);
     }
 }
