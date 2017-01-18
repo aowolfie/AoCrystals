@@ -1,16 +1,10 @@
 {
-  "forge_marker": 1,
-  "defaults": {
-    "textures": {
-      "all": "aocrystals:blocks/breakerBlock"
-    }
-  },
   "variants": {
-    "normal": {
-      "model": "cube_all"
-    },
-    "inventory": {
-      "model": "cube_all"
-    }
+    "facing=down":  { "model": "aocrystals:breakerBlock_vertical", "x": 180 },
+    "facing=up":    { "model": "aocrystals:breakerBlock_vertical" },
+    "facing=north": { "model": "aocrystals:breakerBlock" },
+    "facing=south": { "model": "aocrystals:breakerBlock", "y": 180 },
+    "facing=west":  { "model": "aocrystals:breakerBlock", "y": 270 },
+    "facing=east":  { "model": "aocrystals:breakerBlock", "y": 90 }
   }
 }
